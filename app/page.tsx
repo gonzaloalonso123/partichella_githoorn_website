@@ -47,7 +47,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen overflow-hidden relative sky-gradient">
-      {/* Stars in the sky */}
       <div className="absolute inset-0 z-0">
         {Array.from({ length: 50 }).map((_, i) => (
           <div
@@ -63,8 +62,6 @@ export default function Home() {
           ></div>
         ))}
       </div>
-
-      {/* Animated Birds */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
         <AnimatedBird
           pathClass="bird-path-1"
@@ -102,21 +99,6 @@ export default function Home() {
           delay={4}
         />
       </div>
-
-      {/* Musical Notes */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
-        {musicNotes.map((note) => (
-          <MusicNote
-            key={note.id}
-            left={note.left}
-            startDelay={note.delay}
-            color="#7c3aed"
-            size={Math.random() * 16 + 16} // Random size between 16-32px
-          />
-        ))}
-      </div>
-
-      {/* Cloud Navigation */}
       <nav className="relative z-20 pt-8 px-4 flex justify-center">
         <div className="flex flex-wrap justify-center gap-6 md:gap-10">
           <CloudLink href="#about">About</CloudLink>
@@ -126,8 +108,6 @@ export default function Home() {
           <CloudLink href="#testimonials">Reviews</CloudLink>
         </div>
       </nav>
-
-      {/* Hero Section - Redesigned with Logo on right for large screens */}
       <section className="relative z-10 pt-16 pb-32 md:pt-24 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
@@ -875,10 +855,7 @@ export default function Home() {
             <Button className="bg-white text-violet-700 hover:bg-violet-50 px-8 py-6 text-xl rounded-full">
               Book a Free Trial
             </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white/10 px-8 py-6 text-xl rounded-full"
-            >
+            <Button className="border-white text-white px-8 py-6 text-xl rounded-full">
               View Class Schedule
             </Button>
           </div>
